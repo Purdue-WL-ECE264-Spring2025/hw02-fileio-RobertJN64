@@ -10,10 +10,10 @@ SRCS = main.c filechar.c fileint.c
 OBJS = $(SRCS:%.c=%.o)
 
 hw02: $(OBJS) 
-	$(GCC) $(TESTFALGS) $(OBJS) -o hw02
+	$(GCC) $(OBJS) -o hw02
 
 .c.o: 
-	$(GCC) $(TESTFALGS) -c solved/$*.c 
+	$(GCC) -c solved/$*.c 
 
 testall: test1 test2 test3 test4
 
