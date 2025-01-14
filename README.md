@@ -97,38 +97,20 @@ bool writeSum(const char *filename, int sum);
 
 ## **Files and Separate Compilation**
 
-- Write your code for character-related operations (Part 1) in `filechar.c` and `filechar.h`.
-- Write your code for integer-related operations (Part 2) in `fileint.c` and `fileint.h`.
+- Write your code for character-related operations (Part 1) in `filechar.c`.
+- Write your code for integer-related operations (Part 2) in `fileint.c`.
 - Ensure your functions are compiled and linked separately.
 
 ---
 
 ## **Testing Your Program**
 
-### **General Requirements:**
-
-1. Ensure your program can handle the following scenarios:
-   - No input file provided (`argc < 2`)
-   - Input file does not exist or cannot be opened
-   - `size` parameter is not 256
-   - Files with unexpected content
-2. Avoid program crashes in all cases.
-
-### **Sample Files:**
-
-- Provide test files for both character and integer input.
-
-- Example input file for characters:
+- The Makefile provided includes several test cases. Example:
 
   ```plaintext
-  Hello, ECE 264!
+  make test1
   ```
-
-- Example input file for integers:
-
-  ```plaintext
-  10 20 30 40
-  ```
+Feel free to create more custom test cases as well.
 
 ---
 
@@ -138,4 +120,3 @@ bool writeSum(const char *filename, int sum);
   - `filechar.c`, `fileint.c`
 Do this through the use of the zip command:
   -  `zip hw02.zip filechar.c fileint.c`
-
