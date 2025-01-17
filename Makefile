@@ -13,7 +13,7 @@ hw02: $(OBJS)
 	$(GCC) $(OBJS) -o hw02
 
 .c.o: 
-	$(GCC) -c solved/$*.c 
+	$(GCC) -c $*.c 
 
 testall: test1 test2 test3 test4
 
