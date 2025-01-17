@@ -10,7 +10,7 @@ bool countChar(char *filename, int *counts, int size) {
   }
 
   // if fopen succeeds, read every character from the file
-  char onechar;
+  int onechar; // store as int to handle characters > 127
   do {
     onechar = getc(file);
     // if a character (call it onechar) is between
@@ -18,7 +18,7 @@ bool countChar(char *filename, int *counts, int size) {
     // counts[onechar] by one
     // You should *NOT* assume that size is 256
     if (0 <= onechar && onechar < size) {
-      counts[(int)onechar] += 1;
+      counts[onechar] += 1;
     }
   } while (onechar != EOF);
 
